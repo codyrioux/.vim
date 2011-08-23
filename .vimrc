@@ -4,8 +4,8 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-set tabstop=4
-set shiftwidth=4	" number of spaces used for autoindenting
+set tabstop=2
+set shiftwidth=2 " number of spaces used for autoindenting
 set ai
 set nu				" show line numbers
 set nowrap			" don't wrap lines
@@ -21,6 +21,11 @@ syntax on
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Command-T related hotkeys
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>O <Esc>:CommandTFlush<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR>
 
 " Opening a new buffer hides the currently open buffer
 set hidden
