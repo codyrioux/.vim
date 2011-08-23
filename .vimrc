@@ -27,6 +27,10 @@ noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Esc>:CommandTBuffer<CR>
 
+" Tagbar related hotkeys
+let g:tagbar_usearrows = 1
+nnoremap <leader>l :TagbarToggle<CR>
+
 " Opening a new buffer hides the currently open buffer
 set hidden
 
