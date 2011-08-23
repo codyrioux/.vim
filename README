@@ -1,0 +1,5 @@
+To install on *nix systems simply type the following commands:
+
+git clone git://github.com/codyrioux/.vim.git ~/.vim
+chmod +x ~/.vim/install.sh
+~/.vim/install.sh
