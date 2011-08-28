@@ -67,5 +67,6 @@ syn on
 set spell
 set go-=T
 
+" Clear the search highlighting
 nmap <silent> <leader>/ :let @/=""<CR>
 map <leader>td <Plug>TaskList
