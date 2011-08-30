@@ -61,7 +61,7 @@ set pastetoggle=<F2>
 
 " gVim specific settings
 set guifont=ProFontX
-colorscheme herald
+colorscheme Tomorrow-Night-Bright
 set transparency=15
 syn on
 set spell
