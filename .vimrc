@@ -12,6 +12,7 @@ set nowrap			" don't wrap lines
 set cursorline
 set cursorcolumn
 set nocompatible
+set expandtab " Convert tabs to spaces 
 filetype on
 filetype plugin on
 filetype indent on
