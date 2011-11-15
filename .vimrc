@@ -32,6 +32,9 @@ noremap <leader>m <Esc>:CommandTBuffer<CR>
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
+" Map NERDTree to \p
+nmap <silent> <leader>p :NERDTreeToggle<CR>
+
 " Opening a new buffer hides the currently open buffer
 set hidden
 
