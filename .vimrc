@@ -1,7 +1,7 @@
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
 filetype off
-pathogen#infect()
+call pathogen#infect()
 
 set tabstop=2
 set shiftwidth=2 " number of spaces used for autoindenting
