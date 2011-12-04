@@ -86,13 +86,24 @@ set noerrorbells	" don't beep
 set pastetoggle=<F2>
 
 " gVim specific settings
-set guifont=ProFontX
 colorscheme Tomorrow-Night-Bright
-set transparency=15
 syn on
 set spell
 set go-=T
 
+" MacVim Specific Settings
+if has("gui_macvim")
+  set transparency=15
+  set guifont=ProFontX
+endif
+
 " Clear the search highlighting
 nmap <silent> <leader>/ :let @/=""<CR>
 map <leader>td <Plug>TaskList
+
+" Use space bar for folding
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
+vnoremap <Space> zf
+
+" Set erlang man path on my mac
+let g:erlang_man_path='/usr/local/share/man'
