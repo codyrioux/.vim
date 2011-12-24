@@ -1,0 +1,14 @@
+# Include EUnit
+snippet ince
+	-include_lib("eunit/include/eunit.hrl"). 
+# Assert
+snippet ?
+	?assert${1}(${2:expected}, ${3:actual}).
+# Assert Generator
+snippet ?_
+	?_assert${1}(${2:expected}, ${3:actual}).
+# Test Method Template
+snippet test
+	${1:func}_${2:input}_${3:expectation}() ->
+		% Arrange, Act, Assert
+		?_asseert${4}(${5:expected}, ${6:actual}).
