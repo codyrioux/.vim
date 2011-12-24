@@ -17,13 +17,24 @@ snippet ?match
 snippet ?error
 	?assertError(${1:pattern}, ${2:expression})
 # Assert Generator
+snippet ?_
+	?_assert(${1:expression})
+# Assert Not Generator
+snippet ?_not
+	?_assertNot(${1:expression})
+# Assert Equal Generator
 snippet ?_equal
-	?_assert${1}(${2:expected}, ${3:actual}).
+	?_assertEqual(${2:expected}, ${3:actual})
+# Assert Match Generator
+snippet ?_match
+	?_assertMatch(${1:pattern}, ${2:expression})
+# Assert Error Generator
+snippet ?_error
+	?_assertError(${1:pattern}, ${2:expression})
 # Test Method Template
 snippet test
-	${1:func}_${2:input}_${3:expectation}() ->
-		% Arrange, Act, Assert
-		?_asseert${4}(${5:expected}, ${6:actual}).
+	${1:unit}_${2:scenario}_${3:expectedResult}() ->
+		?_asseert${4:assertion}(${5:expected}, ${6:actual}).
 # Test File Template
 snippet testfile
 	-module(${1:`Filename('', 'my')`})).
@@ -37,9 +48,9 @@ snippet testfile
 	%%% SETUP FUNCTIONS %%%
 	%%%%%%%%%%%%%%%%%%%%%%%
 	
-	%%%%%%%%%%%%%%%%%%%%
-	%%% ACTUAL TESTS %%%
-	%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%
+	%%% TESTS %%%
+	%%%%%%%%%%%%%
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%
 	%%% HELPER FUNCTIONS %%%
