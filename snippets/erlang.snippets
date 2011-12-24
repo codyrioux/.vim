@@ -3,12 +3,44 @@ snippet ince
 	-include_lib("eunit/include/eunit.hrl"). 
 # Assert
 snippet ?
-	?assert${1}(${2:expected}, ${3:actual}).
+	?assert(${1:expression})
+# Assert Not
+snippet ?not
+	?assertNot(${1:expression})
+# Assert Equal
+snippet ?equal
+	?assertEqual(${2:expected}, ${3:actual})
+# Assert Match
+snippet ?match
+	?assertMatch(${1:pattern}, ${2:expression})
+# Assert Error
+snippet ?error
+	?assertError(${1:pattern}, ${2:expression})
 # Assert Generator
-snippet ?_
+snippet ?_equal
 	?_assert${1}(${2:expected}, ${3:actual}).
 # Test Method Template
 snippet test
 	${1:func}_${2:input}_${3:expectation}() ->
 		% Arrange, Act, Assert
 		?_asseert${4}(${5:expected}, ${6:actual}).
+# Test File Template
+snippet testfile
+	-module(${1:`Filename('', 'my')`})).
+	-include_lib("eunit/include/eunit.hrl").
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%% TESTS DESCRIPTIONS %%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%%%%%%%
+	%%% SETUP FUNCTIONS %%%
+	%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%%%%
+	%%% ACTUAL TESTS %%%
+	%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%
+	%%% HELPER FUNCTIONS %%%
+	%%%%%%%%%%%%%%%%%%%%%%%%
