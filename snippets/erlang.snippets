@@ -9,7 +9,7 @@ snippet ?not
 	?assertNot(${1:expression})
 # Assert Equal
 snippet ?equal
-	?assertEqual(${2:expected}, ${3:actual})
+	?assertEqual(${1:expected}, ${2:actual})
 # Assert Match
 snippet ?match
 	?assertMatch(${1:pattern}, ${2:expression})
@@ -33,7 +33,7 @@ snippet ?_error
 	?_assertError(${1:pattern}, ${2:expression})
 # Test Method Template
 snippet test
-	${1:unit}_${2:scenario}_${3:expectedResult}() ->
+	${1:unit}_${2:scenario}_${3:expectedResult}_test() ->
 		?_assert${4:assertion}(${5:expected}, ${6:actual}).
 # Test Fixture
 snippet fixture
