@@ -45,18 +45,6 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" Command-T related hotkeys
-noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>O <Esc>:CommandTFlush<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR>
-
-" Tagbar related hotkeys
-let g:tagbar_usearrows = 1
-nnoremap <leader>l :TagbarToggle<CR>
-
-" Map NERDTree to \p
-nmap <silent> <leader>p :NERDTreeToggle<CR>
-
 " Opening a new buffer hides the currently open buffer
 set hidden
 
@@ -99,7 +87,6 @@ endif
 
 " Clear the search highlighting
 nmap <silent> <leader>/ :let @/=""<CR>
-map <leader>td <Plug>TaskList
 
 " Use space bar for folding
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
