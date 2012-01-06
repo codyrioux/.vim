@@ -10,3 +10,6 @@
 [submodule "bundle/vim-cofee-script"]
 	path = bundle/vim-cofee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/LustyExplorer"]
+	path = bundle/LustyExplorer
+	url = git://github.com/vim-scripts/LustyExplorer.git
