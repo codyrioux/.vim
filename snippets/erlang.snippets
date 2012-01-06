@@ -34,7 +34,7 @@ snippet ?_error
 # Test Method Template
 snippet test
 	${1:unit}_${2:scenario}_${3:expectedResult}_test() ->
-		?_assert${4:assertion}(${5:expected}, ${6:actual}).
+		?assert${4:Assertion}(${5:expected}, ${6:actual}).
 # Test Fixture
 snippet fixture
 	{${1:setup}, ${2:Where}, ${3:Setup}, ${4:Cleanup}, ${5:Instantiator}}
