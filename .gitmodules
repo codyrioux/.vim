@@ -13,3 +13,6 @@
 [submodule "bundle/LustyExplorer"]
 	path = bundle/LustyExplorer
 	url = git://github.com/vim-scripts/LustyExplorer.git
+[submodule "bundle/VimClojure"]
+	path = bundle/VimClojure
+	url = https://github.com/vim-scripts/VimClojure.git
