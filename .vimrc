@@ -118,3 +118,7 @@ let g:erlang_man_path='/usr/local/share/man'
 " CtrlP.vim Mappings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
+
+" VimClojure Settings
+let vimclojure#HighlightBuiltins=1
+let vimclojure#ParenRainbow=1
