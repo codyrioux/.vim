@@ -1,18 +1,18 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
+	url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/vimerl"]
 	path = bundle/vimerl
-	url = https://github.com/jimenezrick/vimerl.git
+	url = git://github.com/jimenezrick/vimerl.git
 [submodule "bundle/surround"]
 	path = bundle/surround
-	url = https://github.com/tpope/vim-surround.git
+	url = git://github.com/tpope/vim-surround.git
 [submodule "bundle/vim-cofee-script"]
 	path = bundle/vim-cofee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/LustyExplorer"]
-	path = bundle/LustyExplorer
-	url = https://github.com/vim-scripts/LustyExplorer.git
+	url = git://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/VimClojure"]
 	path = bundle/VimClojure
-	url = https://github.com/vim-scripts/VimClojure.git
+	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git

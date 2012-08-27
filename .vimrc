@@ -114,3 +114,7 @@ else
 endif
 " Set erlang man path on my mac
 let g:erlang_man_path='/usr/local/share/man'
+
+" CtrlP.vim Mappings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
