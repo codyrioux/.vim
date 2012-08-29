@@ -122,3 +122,4 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 " VimClojure Settings
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
+let vimclojure#WantNailgun=1
