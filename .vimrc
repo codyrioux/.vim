@@ -104,7 +104,8 @@ endif
 " MacVim Specific Settings
 if has("gui_macvim")
   set transparency=15
-  set guifont=ProFontX
+  "set guifont=ProFontX
+  set guifont=SourceCodePro-Regular
 endif
 
 if isWindowsHost

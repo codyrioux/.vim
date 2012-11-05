@@ -7,9 +7,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-cofee-script"]
-	path = bundle/vim-cofee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/VimClojure"]
 	path = bundle/VimClojure
 	url = git://github.com/vim-scripts/VimClojure.git
