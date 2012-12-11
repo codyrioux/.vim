@@ -123,7 +123,7 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 " VimClojure Settings
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
-let vimclojure#WantNailgun=1
+let vimclojure#WantNailgun=0
 
 " Numbers.vim Settings
 " nnoremap <F3> :NumbersToggle<CR>

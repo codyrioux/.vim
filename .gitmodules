@@ -1,9 +1,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "bundle/vimerl"]
-	path = bundle/vimerl
-	url = git://github.com/jimenezrick/vimerl.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
