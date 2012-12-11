@@ -2,13 +2,12 @@
 " the ~/.vim/bundle directory
 filetype off
 call pathogen#infect()
-
-let isWindowsHost = has('win32') || has('win16')
-
 filetype on
 filetype plugin on
 filetype indent on
 syntax on
+
+let isWindowsHost = has('win32') || has('win16')
 
 set tabstop=2
 set shiftwidth=2 " number of spaces used for autoindenting
@@ -71,20 +70,11 @@ autocmd FileType css set ts=2
 autocmd FileType css set sts=2
 autocmd FileTYpe css set textwidth=79
 
-"JavaScript (tab width 4 chars, wrap at 79th)
-autocmd FileType javascript set sw=4
-autocmd FileType javascript set ts=4
-autocmd FileType javascript set sts=4
+"JavaScript (tab width 2 chars, wrap at 79th)
+autocmd FileType javascript set sw=2
+autocmd FileType javascript set ts=2
+autocmd FileType javascript set sts=2
 autocmd FileType javascript set textwidth=79
-
-" Autocompletion
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 colorscheme herald
 
@@ -104,8 +94,8 @@ endif
 " MacVim Specific Settings
 if has("gui_macvim")
   set transparency=15
-  "set guifont=ProFontX
-  set guifont=SourceCodePro-Regular
+  set guifont=ProFontX
+  "set guifont=SourceCodePro-Regular
 endif
 
 if isWindowsHost
@@ -113,8 +103,6 @@ if isWindowsHost
 else
 	set directory=~/.vim/swp//,.,/tmp//
 endif
-" Set erlang man path on my mac
-let g:erlang_man_path='/usr/local/share/man'
 
 " CtrlP.vim Mappings
 let g:ctrlp_map = '<c-p>'
@@ -126,4 +114,4 @@ let vimclojure#ParenRainbow=1
 let vimclojure#WantNailgun=0
 
 " Numbers.vim Settings
-" nnoremap <F3> :NumbersToggle<CR>
+ nnoremap <F3> :NumbersToggle<CR>
