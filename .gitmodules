@@ -4,9 +4,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "bundle/VimClojure"]
-	path = bundle/VimClojure
-	url = git://github.com/vim-scripts/VimClojure.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
@@ -16,3 +13,12 @@
 [submodule "bundle/numbers"]
 	path = bundle/numbers
 	url = https://github.com/myusuf3/numbers.vim.git
+[submodule "bundle/vim-clojure-static"]
+	path = bundle/vim-clojure-static
+	url = git://github.com/guns/vim-clojure-static.git
+[submodule "bundle/rainbow_parenthesis"]
+	path = bundle/rainbow_parenthesis
+	url = git://github.com/kien/rainbow_parentheses.vim.git
+[submodule "bundle/vim-foreplay"]
+	path = bundle/vim-foreplay
+	url = git://github.com/tpope/vim-foreplay.git
