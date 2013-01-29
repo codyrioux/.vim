@@ -22,3 +22,6 @@
 [submodule "bundle/vim-foreplay"]
 	path = bundle/vim-foreplay
 	url = git://github.com/tpope/vim-foreplay.git
+[submodule "bundle/vim-classpath"]
+	path = bundle/vim-classpath
+	url = git://github.com/tpope/vim-classpath.git
