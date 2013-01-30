@@ -1,5 +1,6 @@
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
+set nocp
 filetype off
 call pathogen#infect()
 filetype on
