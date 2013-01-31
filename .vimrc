@@ -77,7 +77,7 @@ autocmd FileType javascript set ts=4
 autocmd FileType javascript set sts=4
 autocmd FileType javascript set textwidth=79
 
-colorscheme herald
+colorscheme Tomorrow-Night-Bright
 
 """"""""""""""""""""""
 " Conditional Settings
