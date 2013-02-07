@@ -144,3 +144,11 @@ let g:clojure_maxlines = 100
 let g:clojure_fuzzy_inent = 1
 let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*"
 let g:clojure_align_multiline_strings = 1
+
+" Gmail settings
+let g:gmail_imap = 'imap.gmail.com:993'
+let g:gmail_smtp = 'smtp.gmail.com:465'
+let g:gmail_user_name = 'cody.rioux@gmail.com'
+let g:gmail_signature = '# Cody Rioux'
+
+source ~/.gmailvimrc

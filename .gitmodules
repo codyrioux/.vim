@@ -25,3 +25,9 @@
 [submodule "bundle/vim-classpath"]
 	path = bundle/vim-classpath
 	url = git://github.com/tpope/vim-classpath.git
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.git
+[submodule "bundle/gmail"]
+	path = bundle/gmail
+	url = https://github.com/yuratomo/gmail.vim
