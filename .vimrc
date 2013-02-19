@@ -38,6 +38,7 @@ set hidden " Opening a new buffer hides the currently open buffer
 set foldmethod=indent
 set foldlevel=99
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [ENC=%{strlen(&fenc)?&fenc:'none'}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set laststatus=2
 
 """""""""""""""""""""
 " Custom Keybindings
