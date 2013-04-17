@@ -31,9 +31,6 @@
 [submodule "bundle/gmail"]
 	path = bundle/gmail
 	url = https://github.com/yuratomo/gmail.vim
-[submodule "bundle/vim-seek"]
-	path = bundle/vim-seek
-	url = git://github.com/goldfeld/vim-seek.git
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
