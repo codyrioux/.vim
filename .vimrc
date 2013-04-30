@@ -153,5 +153,3 @@ let g:gmail_imap = 'imap.gmail.com:993'
 let g:gmail_smtp = 'smtp.gmail.com:465'
 let g:gmail_user_name = 'cody.rioux@gmail.com'
 let g:gmail_signature = '# Cody Rioux'
-
-source ~/.gmailvimrc
