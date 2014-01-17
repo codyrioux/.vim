@@ -1,3 +1,4 @@
 spell/
 repl-port
 .netrwhist
+tmp/
