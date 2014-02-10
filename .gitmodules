@@ -34,3 +34,6 @@
 [submodule "bundle/vim-sneak"]
 	path = bundle/vim-sneak
 	url = https://github.com/justinmk/vim-sneak.git
+[submodule "bundle/vim-typedclojure"]
+	path = bundle/vim-typedclojure
+	url = git://github.com/typedclojure/vim-typedclojure.git
