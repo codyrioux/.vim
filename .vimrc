@@ -59,6 +59,11 @@ set pastetoggle=<F2>
 " File Specific
 " Configuration Settings
 """""""""""""""""""""""""
+" Python (tab width 2 chars, no wrapping)
+autocmd FileType python set sw=2
+autocmd FileType python set ts=2
+autocmd FileType python set sts=2
+autocmd FileType python set textwidth=0
 
 " HTML (tab width 2 chars, no wrapping)
 autocmd FileType html set sw=2
@@ -70,7 +75,7 @@ autocmd FileType html set textwidth=0
 autocmd FileType css set sw=2
 autocmd FileType css set ts=2
 autocmd FileType css set sts=2
-autocmd FileTYpe css set textwidth=79
+autocmd FileType css set textwidth=79
 
 "JavaScript (tab width 2 chars, wrap at 79th)
 autocmd FileType javascript set sw=4
@@ -135,12 +140,21 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 
+
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" vim-sneak replaces f
+nmap f <Plug>Sneak_s
+nmap F <Plug>Sneak_S
+xmap f <Plug>Sneak_s
+xmap F <Plug>Sneak_S
+omap f <Plug>Sneak_s
+omap F <Plug>Sneak_S
 
 " vim-clojure-static settings
 let g:clojure_maxlines = 100
