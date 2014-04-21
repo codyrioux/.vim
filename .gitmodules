@@ -37,6 +37,3 @@
 [submodule "bundle/vim-typedclojure"]
 	path = bundle/vim-typedclojure
 	url = git://github.com/typedclojure/vim-typedclojure.git
-[submodule "bundles/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
