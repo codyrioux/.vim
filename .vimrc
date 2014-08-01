@@ -60,10 +60,16 @@ set pastetoggle=<F2>
 " Configuration Settings
 """""""""""""""""""""""""
 " Python (tab width 2 chars, no wrapping)
-autocmd FileType python set sw=2
-autocmd FileType python set ts=2
-autocmd FileType python set sts=2
-autocmd FileType python set textwidth=0
+autocmd FileType python set textwidth=79
+autocmd FileType python set shiftwidth=4
+autocmd FileType python set tabstop=4
+autocmd FileType python set expandtab
+autocmd FileType python set softtabstop=4
+autocmd FileType python set shiftround
+autocmd FileType python set autoindent
+
+autocmd BufWritePost *.py call Flake8()
+
 
 " HTML (tab width 2 chars, no wrapping)
 autocmd FileType html set sw=2
@@ -82,8 +88,6 @@ autocmd FileType javascript set sw=4
 autocmd FileType javascript set ts=4
 autocmd FileType javascript set sts=4
 autocmd FileType javascript set textwidth=79
-
-colorscheme Tomorrow-Night-Bright
 
 """"""""""""""""""""""
 " Conditional Settings
@@ -161,6 +165,8 @@ let g:clojure_maxlines = 100
 let g:clojure_fuzzy_inent = 1
 let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*"
 let g:clojure_align_multiline_strings = 1
+
+colorscheme herald
 
 " vim-airline settings
 set ttimeoutlen=50
