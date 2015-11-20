@@ -55,3 +55,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
+[submodule "bundle/gitgutter"]
+	path = bundle/gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
