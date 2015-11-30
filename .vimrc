@@ -170,3 +170,6 @@ colorscheme herald
 
 " vim-airline settings
 set ttimeoutlen=50
+
+" tagbar
+nmap <F8> :TagbarToggle<CR>
