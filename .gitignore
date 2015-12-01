@@ -2,3 +2,4 @@ spell/
 repl-port
 .netrwhist
 tmp/
+*.swp

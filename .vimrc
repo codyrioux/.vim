@@ -166,7 +166,7 @@ let g:clojure_fuzzy_inent = 1
 let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*"
 let g:clojure_align_multiline_strings = 1
 
-colorscheme herald
+colorscheme solarized
 
 " vim-airline settings
 set ttimeoutlen=50
