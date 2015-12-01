@@ -4,9 +4,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
 [submodule "bundle/paredit"]
 	path = bundle/paredit
 	url = git://github.com/vim-scripts/paredit.vim.git
