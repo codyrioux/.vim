@@ -179,3 +179,6 @@ set ttimeoutlen=50
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" NERDTree
+map <leader>k :NERDTree<CR>
