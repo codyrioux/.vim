@@ -47,10 +47,6 @@ set laststatus=2
 " Clear the search highlighting
 nmap <silent> <leader>/ :let @/=""<CR>
 
-" Use space bar for folding
-nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
-vnoremap <Space> zf
-
 " add a 'paste mode' that disables all autoindenting to paste large blobs of
 " text
 set pastetoggle=<F2>
