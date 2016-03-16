@@ -3,3 +3,4 @@ repl-port
 .netrwhist
 tmp/
 *.swp
+files/

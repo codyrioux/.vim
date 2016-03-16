@@ -73,3 +73,6 @@
 [submodule "bundle/vim-startify"]
 	path = bundle/vim-startify
 	url = git@github.com:mhinz/vim-startify.git
+[submodule "bundle/ensime-vim"]
+	path = bundle/ensime-vim
+	url = git@github.com:ensime/ensime-vim.git
