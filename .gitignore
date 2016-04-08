@@ -4,3 +4,4 @@ repl-port
 tmp/
 *.swp
 files/
+plugged/
