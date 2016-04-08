@@ -26,6 +26,9 @@ Plug 'mhinz/vim-startify'
 Plug 'justinmk/vim-sneak'
 Plug 'ervandew/supertab'
 
+" Python
+Plug 'nvie/vim-flake8'
+
 " Scala
 Plug 'derekwyatt/vim-scala'
 
