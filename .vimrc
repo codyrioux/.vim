@@ -8,40 +8,36 @@ call plug#begin('~/.vim/plugged')
 
 " Color Schmes
 Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-vividchalk'
 
-" Build Tools Integration
+" Developer Tools Integration
 Plug 'tfnico/vim-gradle'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'} | Plug 'idanarye/vim-vebugger'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Utilities
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'myusuf3/numbers.vim'
 Plug 'vim-scripts/paredit.vim'
 Plug 'oblitum/rainbow'
-Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/syntastic'
-Plug 'mhinz/vim-startify'
 Plug 'justinmk/vim-sneak'
 Plug 'ervandew/supertab'
+Plug 'vimwiki/vimwiki'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'mileszs/ack.vim'
 
-" Python
-Plug 'nvie/vim-flake8'
-
-" Scala
-Plug 'derekwyatt/vim-scala'
+" Java Related
+Plug 'artur-shaik/vim-javacomplete2'
 
 " Clojre Related
 Plug 'tpope/vim-classpath'
 Plug 'guns/vim-clojure-static' | Plug 'tpope/vim-fireplace'
 
-" Other
-
-Plug 'ches/ensime-vim', { 'branch': 'dot-ensime-sexp-parser' }
 call plug#end()
-
-let isWindowsHost = has('win32') || has('win16')
 
 set tabstop=2
 set shiftwidth=2 " number of spaces used for autoindenting
@@ -78,7 +74,7 @@ set visualbell
 " Custom Keybindings
 """""""""""""""""""""
 
-:let mapleader = "\<Space>"
+let mapleader = "\<Space>"
 
 " Clear the search highlighting
 nmap <silent> <leader>/ :let @/=""<CR>
@@ -99,8 +95,6 @@ autocmd FileType python set expandtab
 autocmd FileType python set softtabstop=4
 autocmd FileType python set shiftround
 autocmd FileType python set autoindent
-
-autocmd BufWritePost *.py call Flake8()
 
 
 " HTML (tab width 2 chars, no wrapping)
@@ -124,6 +118,8 @@ autocmd FileType javascript set textwidth=79
 " gradle settings
 autocmd FileType groovy :compiler gradlew
 autocmd FileType scala :compiler gradlew
+autocmd FileType java :compiler gradlew
+autocmd FileType clojure :compiler gradlew
 
 """"""""""""""""""""""
 " Conditional Settings
@@ -140,25 +136,17 @@ endif
 
 " MacVim Specific Settings
 if has("gui_macvim")
-  set transparency=15
+  set transparency=0
   set guifont=ProFontX
 endif
 
-if isWindowsHost
-	set directory=$USERPROFILE\\vimfiles\\swp//,.,C:\temp//
-else
-	set directory=~/.vim/swp//,/tmp//
-endif
+set directory=~/.vim/swp//,/tmp//
 
 " CtrlP.vim Mappings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-
-" Numbers.vim Settings
- nnoremap <F3> :NumbersToggle<CR>
 
 " rainbow_parenthesis settings
 let g:rbpt_colorpairs = [
@@ -206,14 +194,28 @@ colorscheme solarized
 " vim-airline settings
 set ttimeoutlen=50
 
-" tagbar
-nmap <leader>t :TagbarToggle<CR>
-
-" nerd tree
-nmap <leader>nt :NERDTreeToggle<CR>
-
-" vim-scala
-nmap <leader>si :SortScalaImports<CR>
-let g:scala_sort_across_groups=1
-
 set viminfo='100,n$HOME/.vim/files/info/viminfo
+
+" Relative Line Numbers
+set relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
+
+" Simpler split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
+
+" Java
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+
+let g:JavaComplete_GradleExecutable = './gradlew'
+let g:SuperTabDefaultCompletionType = "context"
+let g:vimfiler_as_default_explorer = 1
