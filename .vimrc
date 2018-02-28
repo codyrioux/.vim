@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-vividchalk'
+Plug 'tssm/fairyfloss.vim'
 
 " Developer Tools Integration
 Plug 'tfnico/vim-gradle'
@@ -32,6 +33,7 @@ Plug 'mileszs/ack.vim'
 
 " Java Related
 Plug 'artur-shaik/vim-javacomplete2'
+Plug 'w0rp/ale'
 
 " Clojre Related
 Plug 'tpope/vim-classpath'
@@ -187,9 +189,10 @@ let g:clojure_align_multiline_strings = 1
 
 " Color Scheme
 let g:solarized_termcolors=256
+set termguicolors
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme molokai
 
 " vim-airline settings
 set ttimeoutlen=50
@@ -219,3 +222,12 @@ imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 let g:JavaComplete_GradleExecutable = './gradlew'
 let g:SuperTabDefaultCompletionType = "context"
 let g:vimfiler_as_default_explorer = 1
+let g:ale_fixers = {
+      \ 'java': ['google_java_format', 'trim_whitespace', 'remove_trailing_lines'],
+      \}
+
+let g:ale_linters = {'clojure': []}
+
+augroup MyGroup
+    autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
+augroup END
