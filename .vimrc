@@ -6,7 +6,7 @@ syntax on
 
 call plug#begin('~/.vim/plugged')
 
-" Color Schmes
+" Color Schemes
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-vividchalk'
@@ -14,12 +14,10 @@ Plug 'tssm/fairyfloss.vim'
 
 " Developer Tools Integration
 Plug 'tfnico/vim-gradle'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'} | Plug 'idanarye/vim-vebugger'
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-dispatch'
 
 " Utilities
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/paredit.vim'
@@ -27,15 +25,13 @@ Plug 'oblitum/rainbow'
 Plug 'vim-airline/vim-airline'
 Plug 'justinmk/vim-sneak'
 Plug 'ervandew/supertab'
-Plug 'vimwiki/vimwiki'
-Plug 'skywind3000/asyncrun.vim'
 Plug 'mileszs/ack.vim'
 
 " Java Related
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'w0rp/ale'
 
-" Clojre Related
+" Clojure Related
 Plug 'tpope/vim-classpath'
 Plug 'guns/vim-clojure-static' | Plug 'tpope/vim-fireplace'
 
